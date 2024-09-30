@@ -1,0 +1,22 @@
+{%extends 'store/base.html'%}
+
+{%block main_block%}
+
+
+
+<form class="border w-1/2 mx-auto p-5 drop-shadow-lg" action="" method="post" enctype="multipart/form-data">
+
+    <div class="w-1/4 mx-auto border">
+
+        <img src="{{request.user.profile.profile_pic.url}}" alt="" class="w-1/2 rounded-full">
+
+    </div>
+
+    {%csrf_token%}
+
+    {{form}}
+    <button class="border p-2 bg-stone-950 text-white rounded-md" type="submit">edit</button>
+</form>
+
+
+{%endblock%}
